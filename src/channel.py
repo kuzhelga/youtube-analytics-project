@@ -53,3 +53,8 @@ class Channel:
 
     def __str__(self):
         return f"'{self.title} ({self.url})'"
+
+    def __add__(self, other):
+        """Метод для сложения подписчиков каналов"""
+        return int(self.subscriber_count) + int(other.subscriber_count)
+
