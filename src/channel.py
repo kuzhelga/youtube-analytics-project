@@ -50,3 +50,6 @@ class Channel:
 
         with open(filename, 'w') as file:
             json.dump(attributes, file, ensure_ascii=False, indent="")
+
+    def __str__(self):
+        return f"'{self.title} ({self.url})'"
