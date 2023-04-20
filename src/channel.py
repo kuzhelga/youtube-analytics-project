@@ -66,3 +66,18 @@ class Channel:
         """Метод для сравнения < (меньше)"""
         return int(self.subscriber_count) < int(other.subscriber_count)
 
+    def __ge__(self, other):
+        """Метод для сравнения >= (больше или равно)"""
+        return int(self.subscriber_count) >= int(other.subscriber_count)
+
+    def __le__(self, other):
+        """Метод для сравнения <= (меньше или равно)"""
+        return int(self.subscriber_count) <= int(other.subscriber_count)
+
+    def __gt__(self, other):
+        """Метод для сравнения > (больше)"""
+        return int(self.subscriber_count) > int(other.subscriber_count)
+
+    def __eq__(self, other):
+        """Метод для сравнения равенства"""
+        return int(self.subscriber_count) == int(other.subscriber_count)
