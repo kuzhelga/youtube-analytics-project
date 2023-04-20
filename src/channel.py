@@ -61,3 +61,8 @@ class Channel:
     def __sub__(self, other):
         """Метод для сложения подписчиков каналов"""
         return int(self.subscriber_count) - int(other.subscriber_count)
+
+    def __lt__(self, other):
+        """Метод для сравнения < (меньше)"""
+        return int(self.subscriber_count) < int(other.subscriber_count)
+
